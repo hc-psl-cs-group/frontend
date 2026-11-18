@@ -10,7 +10,6 @@
     } from '@/stores/authstore';
 
     const isLoggingIn = ref( true );
-    const isUnowned = ref( false );
     const store = useAuthStore();
 
     const check = async ( force?: boolean ) => {
@@ -25,7 +24,6 @@
             if ( e instanceof sdk.request.AuthError ) {
                 throw e;
             } else if ( ( e as Error ).message === 'ERR_402' ) {
-                isUnowned.value = true;
                 console.log( 'Error' );
             }
         }
@@ -60,7 +58,6 @@
 
 <template>
     <div class="home-page">
-        <UnownedPopup v-model="isUnowned" @recheck="check" />
         <div class="side-container">
             <h1>HCI Project Frontend</h1>
             <p>
