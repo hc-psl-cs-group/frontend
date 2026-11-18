@@ -19,9 +19,9 @@ const router = createRouter( {
             }
         },
         {
-            'path': '/app',
-            'name': 'app',
-            'component': () => import( '@/views/AppView.vue' ),
+            'path': '/questions',
+            'name': 'questions',
+            'component': () => import( '@/views/QuestionnaireView.vue' ),
             'meta': {
                 'title': 'App',
                 'auth': true
@@ -39,7 +39,7 @@ router.beforeEach( to => {
         };
     } else if ( to.name === 'home' && store.isAuth ) {
         return {
-            'name': 'app'
+            'name': 'questions'
         };
     }
 } );
