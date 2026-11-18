@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "question": {
+                "type": "string",
+                "description": "The question that will be displayed to the user"
+            },
+            "explanation": {
+                "type": "string",
+                "description": "Any further explanation that is needed for the user to understand the question. Smaller font"
+            },
+            "type": {
+                "type": "string",
+                "enum": [
+                    "radio",
+                    "multiple",
+                    "short-text",
+                    "textarea"
+                ]
+            },
+            "options": {
+                "type": "array",
+                "description": "The options the user can pick from, ignored if short-text or textarea",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "id": {
+                "type": "string",
+                "description": "The ID of the question. Must be unique"
+            },
+            "linkedQuestionIds": {
+                "type": "array",
+                "description": "Questions to link this to. Optional",
+                "items": {
+                    "type": "string"
+                }
+            }
+        },
+        "additionalProperties": false,
+        "required": [
+            "question",
+            "type",
+            "id"
+        ]
+    }
+}

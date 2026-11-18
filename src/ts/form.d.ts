@@ -23,9 +23,7 @@ export interface Question {
      * ID of the question. Must be unique
      */
     'id': string;
-}
 
-export interface FollowUpQuestion extends Question {
     /**
      * Question to link this to. Optional
      */
