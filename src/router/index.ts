@@ -5,17 +5,16 @@
  */
 
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
-import Index from '@/pages/index.vue'
+import {
+    createRouter, createWebHistory
+} from 'vue-router';
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      component: Index,
-    },
-  ],
-})
+const router = createRouter( {
+    'history': createWebHistory( import.meta.env.BASE_URL ),
+    'routes': [ {
+        'path': '/',
+        'component': () => import( '@/pages/HomePage.vue' )
+    } ]
+} );
 
-export default router
+export default router;

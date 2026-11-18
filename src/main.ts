@@ -5,19 +5,17 @@
  */
 
 // Composables
-import { createApp } from 'vue'
+import App from './App.vue';
+import {
+    createApp
+} from 'vue';
+import {
+    createPinia
+} from 'pinia';
+import router from './router';
 
-// Plugins
-import { registerPlugins } from '@/plugins'
+const app = createApp( App );
 
-// Components
-import App from './App.vue'
-
-// Styles
-import 'unfonts.css'
-
-const app = createApp(App)
-
-registerPlugins(app)
-
-app.mount('#app')
+app.use( createPinia() );
+app.use( router );
+app.mount( '#app' );
