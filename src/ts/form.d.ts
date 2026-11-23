@@ -36,3 +36,13 @@ export interface QuestionSet {
     'description'?: string;
     'followUpQuestions'?: Question[];
 }
+
+export interface Manifest {
+    'name': string;
+    'questionSets': {
+        'name': string;
+        'description'?: string;
+        'url': string;
+    }[];
+    'description'?: string;
+}

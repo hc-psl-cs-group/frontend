@@ -5,8 +5,26 @@
         "questionSets": {
             "type": "array",
             "items": {
-                "type": "string",
-                "description": "URL relative to web root of the json file containing the questions"
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the question set"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Optional description of the question set"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "URL relative to web root of the json file containing the questions"
+                    }
+                },
+                "description": "Question set config",
+                "required": [
+                    "name",
+                    "url"
+                ]
             }
         },
         "name": {
@@ -17,5 +35,9 @@
             "type": "string",
             "description": "Any description to display to the user"
         }
-    }
+    },
+    "required": [
+        "name",
+        "questionSets"
+    ]
 }

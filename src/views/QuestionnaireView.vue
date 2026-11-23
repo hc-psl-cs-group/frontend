@@ -10,8 +10,10 @@
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
 
     const load = async () => {
+        const file = location.search.substring( location.search.indexOf( 'q=' ) + 2 );
+
         try {
-            questionSet.value = await ( await fetch( '/questions.json' ) ).json() as QuestionSet;
+            questionSet.value = await ( await fetch( file.slice( 0, file.indexOf( '&' ) ) ) ).json() as QuestionSet;
         } catch ( error ) {
             console.error( error );
             alert( 'Failed to load questions' );

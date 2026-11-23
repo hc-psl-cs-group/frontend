@@ -19,6 +19,15 @@ const router = createRouter( {
             }
         },
         {
+            'path': '/app',
+            'name': 'app',
+            'component': () => import( '@/views/QuestionnaireSelectPage.vue' ),
+            'meta': {
+                'title': 'App',
+                'auth': true
+            }
+        },
+        {
             'path': '/questions',
             'name': 'questions',
             'component': () => import( '@/views/QuestionnaireView.vue' ),
@@ -39,7 +48,7 @@ router.beforeEach( to => {
         };
     } else if ( to.name === 'home' && store.isAuth ) {
         return {
-            'name': 'questions'
+            'name': 'app'
         };
     }
 } );
