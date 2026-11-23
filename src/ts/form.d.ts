@@ -29,3 +29,10 @@ export interface Question {
      */
     'linkedQuestionId'?: string;
 }
+
+export interface QuestionSet {
+    'name': string;
+    'questions': Question[];
+    'description'?: string;
+    'followUpQuestions'?: Question[];
+}

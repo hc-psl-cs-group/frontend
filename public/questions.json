@@ -1,0 +1,42 @@
+{
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
+    "questions": [
+        {
+            "type": "radio",
+            "question": "This is a question with radio",
+            "id": "q1",
+            "options": [
+                "option 1",
+                "option 2"
+            ]
+        },
+        {
+            "type": "multiple",
+            "question": "This is a question with multiple select",
+            "id": "q2",
+            "options": [
+                "option 1",
+                "option 2"
+            ]
+        },
+        {
+            "type": "short-text",
+            "question": "This is a question with short text input",
+            "id": "q3"
+        },
+        {
+            "type": "textarea",
+            "question": "This is a question with textarea",
+            "id": "q4"
+        },
+        {
+            "type": "short-text",
+            "question": "This is a question with short text input and extra explanation",
+            "explanation": "This is extra explanation for the question",
+            "id": "q5"
+        }
+    ],
+    "description": "This is the description of the question set",
+    "followUpQuestions": [],
+    "name": "Test Question Set"
+}

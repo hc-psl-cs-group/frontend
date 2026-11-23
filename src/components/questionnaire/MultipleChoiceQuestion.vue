@@ -25,14 +25,13 @@
 </script>
 
 <template>
-    <div>
-        <div>
-            <SwitchOption
-                v-for="(item, index) in question.options!"
-                :key="index"
-                v-model="selected[index]"
-                :text="item"
-            />
-        </div>
+    <div style="width: 100%;">
+        <SwitchOption
+            v-for="(item, index) in question.options!"
+            :key="index"
+            v-model="selected[index]"
+            :text="item"
+            label-last
+        />
     </div>
 </template>

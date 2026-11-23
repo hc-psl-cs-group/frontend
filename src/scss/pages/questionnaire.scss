@@ -1,0 +1,44 @@
+.questionnaire-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 50px;
+
+  >div {
+    width: 70%;
+    background-color: var(--theme-app);
+    margin: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    >h2 {
+      margin: 5px;
+    }
+
+    >p {
+      margin: 0px;
+      margin-bottom: 5px;
+    }
+
+    textarea,
+    input {
+      background-color: transparent;
+      color: var(--theme-on-app);
+      border: solid 1px var(--theme-on-app);
+      border-radius: 10px;
+      padding: 7px;
+      font-size: 1rem;
+      width: 80%;
+      resize: vertical;
+    }
+
+    textarea {
+      margin-top: 15px;
+    }
+  }
+}

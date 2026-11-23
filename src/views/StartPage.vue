@@ -59,7 +59,7 @@
 <template>
     <div class="home-page">
         <div class="side-container">
-            <h1>HCI Project Frontend</h1>
+            <h1>Human Centered Privacy And Security Lab Cyber Security Group Frontend</h1>
             <p>
                 Tagline
             </p>

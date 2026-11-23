@@ -4,7 +4,8 @@
     } from 'vue';
 
     const props = defineProps<{
-        'text': string
+        'text': string,
+        'labelLast'?: boolean
     }>();
     const state = defineModel<boolean>();
     const emit = defineEmits<{
@@ -18,11 +19,12 @@
 
 <template>
     <label>
-        <p>{{ props.text }}</p>
+        <p v-if="!props.labelLast">{{ props.text }}</p>
         <label class="switch">
             <input v-model="state" type="checkbox">
             <span class="slider round"></span>
         </label>
+        <p v-if="props.labelLast">{{ props.text }}</p>
     </label>
 </template>
 
