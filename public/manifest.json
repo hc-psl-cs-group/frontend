@@ -1,4 +1,10 @@
 {
-    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/manifest.schema.json",
-    "name": ""
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/refs/heads/main/manifest.schema.json",
+    "name": "Example Survey",
+    "questionSets": [
+        {
+            "name": "Question Set 1",
+            "url": "/questions.json"
+        }
+    ]
 }

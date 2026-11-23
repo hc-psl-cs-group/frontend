@@ -13,7 +13,9 @@
         const file = location.search.substring( location.search.indexOf( 'q=' ) + 2 );
 
         try {
-            questionSet.value = await ( await fetch( file.slice( 0, file.indexOf( '&' ) ) ) ).json() as QuestionSet;
+            const endIdx = file.indexOf( '&' );
+
+            questionSet.value = await ( await fetch( file.slice( 0, endIdx >= 0 ? endIdx : undefined ) ) ).json() as QuestionSet;
         } catch ( error ) {
             console.error( error );
             alert( 'Failed to load questions' );
@@ -34,6 +36,7 @@
 <template>
     <div class="questionnaire-wrapper">
         <h1>{{ questionSet.name }}</h1>
+        <RouterLink to="/app">Back to selector</RouterLink>
         <p v-if="questionSet.description">
             {{ questionSet.description }}
         </p>

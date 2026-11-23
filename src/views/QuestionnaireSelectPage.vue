@@ -30,7 +30,9 @@
         <div v-for="(survey, index) in manifest.questionSets" :key="index">
             <h2>{{ survey.name }}</h2>
             <p v-if="survey.description"></p>
-            <button @click="() => selectSurvey( index )"></button>
+            <button @click="() => selectSurvey( index )">
+                Open
+            </button>
         </div>
     </div>
 </template>
