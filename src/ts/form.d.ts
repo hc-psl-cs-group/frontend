@@ -12,7 +12,7 @@ export interface Question {
     /**
      * The type of response to get
      */
-    'type': 'radio' | 'multiple' | 'short-text' | 'textarea';
+    'type': 'radio' | 'multiple' | 'short-text' | 'textarea' | 'page-break';
 
     /**
      * The options the user can pick from, ignored if short-text or textarea

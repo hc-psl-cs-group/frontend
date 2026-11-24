@@ -19,7 +19,8 @@
                         "radio",
                         "multiple",
                         "short-text",
-                        "textarea"
+                        "textarea",
+                        "page-break"
                     ]
                 },
                 "options": {
