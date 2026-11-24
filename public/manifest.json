@@ -1,10 +1,22 @@
 {
     "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/refs/heads/main/manifest.schema.json",
-    "name": "Example Survey",
+    "name": "Security Culture Survey",
+    "description": "Role-tailored vs. generic security-culture situation questions.",
     "questionSets": [
         {
-            "name": "Question Set 1",
-            "url": "/questions.json"
+            "name": "Generic situations",
+            "description": "Shown to all participants (generic wording).",
+            "url": "/surveys/generic_situations.json"
+        },
+        {
+            "name": "ML engineer situations",
+            "description": "Role-tailored set for the ML engineer condition.",
+            "url": "/surveys/ml_engineer_situations.json"
+        },
+        {
+            "name": "Salesperson situations",
+            "description": "Role-tailored set for the salesperson condition.",
+            "url": "/surveys/sales_situations.json"
         }
     ]
 }

@@ -1,0 +1,393 @@
+{
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
+    "name": "Source statements (reference only)",
+    "description": "Reference statements copied from published questionnaires (HAIS-Q, LISA, Solomon & Brown). NOT shown to participants - this is the scoring key that every situation question maps to. 5-point agreement scale.",
+    "questions": [
+        {
+            "type": "radio",
+            "id": "G1",
+            "question": "I use a different password for my social media and work accounts.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G2",
+            "question": "I share my work passwords with colleagues.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G3",
+            "question": "I use a combination of letters, numbers and symbols in my work passwords.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G4",
+            "question": "I don't always click on links in emails just because they come from someone I know.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G5",
+            "question": "If an email from an unknown sender looks interesting, I click on a link within it.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G6",
+            "question": "I don't open email attachments if the sender is unknown to me.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G7",
+            "question": "I download any files onto my work computer that will help me get the job done.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G8",
+            "question": "When accessing the Internet at work, I visit any website that I want to.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G9",
+            "question": "I assess the safety of websites before entering information.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G10",
+            "question": "I don't regularly review my social media privacy settings.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G11",
+            "question": "I don't post anything on social media before considering any negative consequences.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G12",
+            "question": "I post whatever I want about my work on social media.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G13",
+            "question": "When working in a public place, I leave my laptop unattended.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G14",
+            "question": "I send sensitive work files using a public Wi-Fi network.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G15",
+            "question": "I check that strangers can't see my laptop screen if I'm working on a sensitive document.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G16",
+            "question": "When sensitive print-outs need to be disposed of, I ensure that they are shredded or destroyed.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G17",
+            "question": "I wouldn't plug a USB stick found in a public place into my work computer.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G18",
+            "question": "I leave print-outs that contain sensitive information on my desk when I'm not there.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G19",
+            "question": "I sometimes discuss confidential information even though others may be listening.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G20",
+            "question": "If I saw someone acting suspiciously in my workplace, I would do something about it.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G21",
+            "question": "If I noticed my colleague ignoring security rules, I wouldn't take any action.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ],
+            "explanation": "Reverse-scored (agreement indicates less secure behaviour)."
+        },
+        {
+            "type": "radio",
+            "id": "G22",
+            "question": "If I noticed a security incident, I would report it.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G23",
+            "question": "I will report if I accidentally disclose sensitive information to an unauthorised person.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G24",
+            "question": "I regularly attend courses or training on information security.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G25",
+            "question": "I regularly keep myself informed about the regulations and guidelines on information security within my organisation.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G26",
+            "question": "Top management considers information security an important organisational priority.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G27",
+            "question": "Top management adhere to information security policies themselves.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G28",
+            "question": "My company makes employees aware of its security policies and procedures.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G29",
+            "question": "I believe that employee computing activities are monitored by my organisation.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "G30",
+            "question": "I do my best to strictly follow computing rules and procedures.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree"
+            ]
+        },
+        {
+            "type": "radio",
+            "id": "HP1",
+            "question": "I follow the SecureDesk-789 guideline when printing documents.",
+            "options": [
+                "Strongly disagree",
+                "Disagree",
+                "Neutral",
+                "Agree",
+                "Strongly agree",
+                "Prefer not to answer"
+            ],
+            "explanation": "Honeypot item (not from any published scale); flags overly agreeable answering."
+        }
+    ],
+    "followUpQuestions": []
+}
