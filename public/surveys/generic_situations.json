@@ -1,7 +1,7 @@
 {
     "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
     "name": "Generic situations",
-    "description": "These situations come up in many workplaces. These situations come up in many workplaces. Pick what you would most likely do in practice, not what the rules say. Every option is something people really do.",
+    "description": "These situations come up in many workplaces. Pick what you would most likely do in practice, not what the rules say. Every option is something people really do.",
     "questions": [
         {
             "type": "radio",
