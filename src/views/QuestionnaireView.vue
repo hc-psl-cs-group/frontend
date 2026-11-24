@@ -16,6 +16,11 @@
             const endIdx = file.indexOf( '&' );
 
             questionSet.value = await ( await fetch( file.slice( 0, endIdx >= 0 ? endIdx : undefined ) ) ).json() as QuestionSet;
+            // Randomize question ordering
+            questionSet.value.questions.sort( () => Math.random() - 0.5 );
+            questionSet.value.questions.forEach( val => {
+                val.options?.forEach( () => Math.random() - 0.5 );
+            } );
         } catch ( error ) {
             console.error( error );
             alert( 'Failed to load questions' );
