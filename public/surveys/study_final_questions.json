@@ -1,0 +1,183 @@
+{
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
+    "name": "Final study questions",
+    "description": "You answered two sets of questions. Please compare them and answer the final privacy questions.",
+    "questions": [
+        {
+            "id": "DIF1",
+            "type": "textarea",
+            "question": "In your own words: what was the main difference between the two sets?"
+        },
+        {
+            "id": "CMP1",
+            "type": "radio",
+            "question": "Which set was more comfortable to answer?",
+            "options": [
+                "The first set",
+                "The second set",
+                "No difference"
+            ]
+        },
+        {
+            "id": "CMP2",
+            "type": "radio",
+            "question": "Which set would you rather answer regularly at work?",
+            "options": [
+                "The first set",
+                "The second set",
+                "No difference"
+            ]
+        },
+        {
+            "id": "CMP3",
+            "type": "textarea",
+            "question": "Please explain your two choices in one or two sentences."
+        },
+        {
+            "id": "TR1",
+            "type": "textarea",
+            "question": "In your own words: who will see your answers, and in what form?"
+        },
+        {
+            "id": "TR2",
+            "type": "radio",
+            "question": "If an employer of mine ran this survey, I would be concerned that the answers could be used to evaluate individual employees.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "TR3",
+            "type": "radio",
+            "question": "If an employer of mine ran this survey, I would be worried that my answers could be traced back to me.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU1",
+            "type": "radio",
+            "question": "Consumer online privacy is really a matter of consumers' right to exercise control and autonomy over decisions about how their information is collected, used, and shared.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU2",
+            "type": "radio",
+            "question": "Consumer control of personal information lies at the heart of consumer privacy.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU3",
+            "type": "radio",
+            "question": "Companies seeking information online should disclose the way the data are collected, processed, and used.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU4",
+            "type": "radio",
+            "question": "A good consumer online privacy policy should have a clear and conspicuous disclosure.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU5",
+            "type": "radio",
+            "question": "It usually bothers me when online companies ask me for personal information.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU6",
+            "type": "radio",
+            "question": "When online companies ask me for personal information, I sometimes think twice before providing it.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU7",
+            "type": "radio",
+            "question": "It bothers me to give personal information to so many online companies.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "IU8",
+            "type": "radio",
+            "question": "I'm concerned that online companies are collecting too much personal information about me.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        }
+    ],
+    "followUpQuestions": []
+}
