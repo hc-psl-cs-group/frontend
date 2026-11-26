@@ -1,0 +1,52 @@
+{
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
+    "name": "Study background",
+    "description": "Please answer the following background questions before beginning the study.",
+    "questions": [
+        {
+            "id": "BG1",
+            "type": "radio",
+            "question": "Which role are you answering for?",
+            "options": [
+                "ML engineer",
+                "Salesperson"
+            ]
+        },
+        {
+            "id": "BG2",
+            "type": "radio",
+            "question": "Do you currently work, or have you worked, in this role?",
+            "options": [
+                "Yes, currently",
+                "Yes, in the past",
+                "No"
+            ]
+        },
+        {
+            "id": "BG3",
+            "type": "radio",
+            "question": "If yes: for how long in total?",
+            "options": [
+                "Less than 1 year",
+                "1 year to less than 4 years",
+                "4 years to less than 10 years",
+                "10 years or more"
+            ]
+        },
+        {
+            "id": "BG4",
+            "type": "radio",
+            "question": "How would you rate your own knowledge of IT security?",
+            "options": [
+                "1 - Very low",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7 - Very high"
+            ]
+        }
+    ],
+    "followUpQuestions": []
+}
