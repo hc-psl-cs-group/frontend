@@ -9,13 +9,19 @@
     } from '@/ts/form';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
 
-    const shuffle = <T,>(items: T[]): T[] => {
-        const result = [...items];
+    const shuffle = <T>( items: T[] ): T[] => {
+        const result = [ ...items ];
 
-        for (let i = result.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+        for ( let i = result.length - 1; i > 0; i-- ) {
+            const j = Math.floor( Math.random() * ( i + 1 ) );
 
-            [result[i], result[j]] = [result[j]!, result[i]!];
+            [
+                result[i],
+                result[j]
+            ] = [
+                result[j]!,
+                result[i]!
+            ];
         }
 
         return result;
@@ -23,11 +29,11 @@
 
     const load = async () => {
         const file = location.search.substring(
-            location.search.indexOf('q=') + 2
+            location.search.indexOf( 'q=' ) + 2
         );
 
         try {
-            const endIdx = file.indexOf('&');
+            const endIdx = file.indexOf( '&' );
 
             questionSet.value = await (
                 await fetch(
@@ -44,41 +50,36 @@
             );
 
             // Randomize answer order but keep "Prefer not to answer" last
-            questionSet.value.questions.forEach(question => {
-                if (!question.options) return;
+            questionSet.value.questions.forEach( question => {
+                if ( !question.options ) return;
 
                 const ordinaryOptions = question.options.filter(
-                    option =>
-                        option.trim().toLowerCase() !==
-                        'prefer not to answer'
+                    option => option.trim().toLowerCase()
+                        !== 'prefer not to answer'
                 );
-
                 const optOutOptions = question.options.filter(
-                    option =>
-                        option.trim().toLowerCase() ===
-                        'prefer not to answer'
+                    option => option.trim().toLowerCase()
+                        === 'prefer not to answer'
                 );
 
                 question.options = [
-                    ...shuffle(ordinaryOptions),
+                    ...shuffle( ordinaryOptions ),
                     ...optOutOptions
                 ];
-            });
-
-        } catch (error) {
-            console.error(error);
-            alert('Failed to load questions');
+            } );
+        } catch ( error ) {
+            console.error( error );
+            alert( 'Failed to load questions' );
         }
     };
 
-    const questionSet: Ref<QuestionSet> = ref({
-        name: 'Question Set',
-        questions: [],
-        description: '',
-        followUpQuestions: []
-    });
-
-    const answers: Ref<string[]> = ref([]);
+    const questionSet: Ref<QuestionSet> = ref( {
+        'name': 'Question Set',
+        'questions': [],
+        'description': '',
+        'followUpQuestions': []
+    } );
+    const answers: Ref<string[]> = ref( [] );
 
     load();
 </script>
