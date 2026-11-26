@@ -9,17 +9,63 @@
     } from '@/ts/form';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
 
+    const shuffle = <T>( items: T[] ): T[] => {
+        const result = [ ...items ];
+
+        for ( let i = result.length - 1; i > 0; i-- ) {
+            const j = Math.floor( Math.random() * ( i + 1 ) );
+
+            [
+                result[i],
+                result[j]
+            ] = [
+                result[j]!,
+                result[i]!
+            ];
+        }
+
+        return result;
+    };
+
     const load = async () => {
-        const file = location.search.substring( location.search.indexOf( 'q=' ) + 2 );
+        const file = location.search.substring(
+            location.search.indexOf( 'q=' ) + 2
+        );
 
         try {
             const endIdx = file.indexOf( '&' );
 
-            questionSet.value = await ( await fetch( file.slice( 0, endIdx >= 0 ? endIdx : undefined ) ) ).json() as QuestionSet;
-            // Randomize question ordering
-            questionSet.value.questions.sort( () => Math.random() - 0.5 );
-            questionSet.value.questions.forEach( val => {
-                val.options?.forEach( () => Math.random() - 0.5 );
+            questionSet.value = await (
+                await fetch(
+                    file.slice(
+                        0,
+                        endIdx >= 0 ? endIdx : undefined
+                    )
+                )
+            ).json() as QuestionSet;
+
+            // Randomize question order
+            questionSet.value.questions = shuffle(
+                questionSet.value.questions
+            );
+
+            // Randomize answer order but keep "Prefer not to answer" last
+            questionSet.value.questions.forEach( question => {
+                if ( !question.options ) return;
+
+                const ordinaryOptions = question.options.filter(
+                    option => option.trim().toLowerCase()
+                        !== 'prefer not to answer'
+                );
+                const optOutOptions = question.options.filter(
+                    option => option.trim().toLowerCase()
+                        === 'prefer not to answer'
+                );
+
+                question.options = [
+                    ...shuffle( ordinaryOptions ),
+                    ...optOutOptions
+                ];
             } );
         } catch ( error ) {
             console.error( error );
@@ -41,23 +87,44 @@
 <template>
     <div class="questionnaire-wrapper">
         <h1>{{ questionSet.name }}</h1>
-        <RouterLink to="/app">Back to selector</RouterLink>
+
+        <RouterLink to="/app">
+            Back to selector
+        </RouterLink>
+
         <p v-if="questionSet.description">
             {{ questionSet.description }}
         </p>
-        <div v-for="(question, index) in questionSet.questions" :key="index">
+
+        <div
+            v-for="(question, index) in questionSet.questions"
+            :key="index"
+        >
             <h2>{{ question.question }}</h2>
+
             <p v-if="question.explanation">
                 {{ question.explanation }}
             </p>
-            <MultipleChoiceQuestion v-if="question.type === 'multiple'" v-model="answers[index]" :question="question" />
-            <RadioQuestion v-if="question.type === 'radio'" v-model="answers[index]" :question="question" />
+
+            <MultipleChoiceQuestion
+                v-if="question.type === 'multiple'"
+                v-model="answers[index]"
+                :question="question"
+            />
+
+            <RadioQuestion
+                v-if="question.type === 'radio'"
+                v-model="answers[index]"
+                :question="question"
+            />
+
             <textarea
                 v-if="question.type === 'textarea'"
                 v-model="answers[index]"
                 placeholder="Your response..."
                 rows="7"
             ></textarea>
+
             <input
                 v-if="question.type === 'short-text'"
                 v-model="answers[index]"
