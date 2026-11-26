@@ -1,0 +1,258 @@
+{
+    "$schema": "https://github.com/hc-psl-cs-group/frontend/raw/main/questions.schema.json",
+    "name": "Questionnaire feedback",
+    "description": "The following questions are about the set of situations you have just answered.",
+    "questions": [
+        {
+            "id": "REL1",
+            "type": "radio",
+            "question": "The questions matched the security responsibilities of this role.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "REL2",
+            "type": "radio",
+            "question": "The situations could realistically happen in the day-to-day work of this role.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "INT1",
+            "type": "radio",
+            "question": "If my employer asked me these questions, they would ask for more about me than I would be comfortable sharing.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "INT2",
+            "type": "radio",
+            "question": "If my employer asked me these questions, I would feel uneasy about giving truthful answers.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "INT3",
+            "type": "radio",
+            "question": "If my employer asked me these questions, some of them would feel like a test of me personally.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE1",
+            "type": "radio",
+            "question": "I lost myself in this experience.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE2",
+            "type": "radio",
+            "question": "The time I spent on this set of questions just slipped away.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE3",
+            "type": "radio",
+            "question": "I was absorbed in this experience.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE4",
+            "type": "radio",
+            "question": "I felt frustrated while answering this set of questions.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE5",
+            "type": "radio",
+            "question": "I found this set of questions confusing to answer.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE6",
+            "type": "radio",
+            "question": "Answering this set of questions was taxing.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE7",
+            "type": "radio",
+            "question": "Answering this set of questions was worthwhile.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE8",
+            "type": "radio",
+            "question": "My experience was rewarding.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "UE9",
+            "type": "radio",
+            "question": "I felt interested in this experience.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Neither agree nor disagree",
+                "4 - Agree",
+                "5 - Strongly agree"
+            ]
+        },
+        {
+            "id": "LEN1",
+            "type": "radio",
+            "question": "The length of this set of questions was…",
+            "options": [
+                "1 - Far too short",
+                "2",
+                "3",
+                "4 - Just right",
+                "5",
+                "6",
+                "7 - Far too long"
+            ]
+        },
+        {
+            "id": "LEN2",
+            "type": "radio",
+            "question": "I would be willing to answer a set of questions like this every three months.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "LEN3",
+            "type": "short-text",
+            "question": "How many minutes do you think you spent on this set of questions?"
+        },
+        {
+            "id": "BUR1",
+            "type": "radio",
+            "question": "How burdensome was this set of questions to you?",
+            "options": [
+                "Not at all burdensome",
+                "A little burdensome",
+                "Somewhat burdensome",
+                "Very burdensome"
+            ]
+        },
+        {
+            "id": "USE1",
+            "type": "radio",
+            "question": "Answering these questions made me think about how I handle security at work.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        },
+        {
+            "id": "USE2",
+            "type": "radio",
+            "question": "A company could learn something useful about its security culture from answers to these questions.",
+            "options": [
+                "1 - Strongly disagree",
+                "2 - Disagree",
+                "3 - Somewhat disagree",
+                "4 - Neither agree nor disagree",
+                "5 - Somewhat agree",
+                "6 - Agree",
+                "7 - Strongly agree"
+            ]
+        }
+    ],
+    "followUpQuestions": []
+}
