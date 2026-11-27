@@ -8,6 +8,7 @@
         QuestionSet
     } from '@/ts/form';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
+    import QuestionnaireFollowUp from '@/views/QuestionnaireFollowUp.vue';
     import {
         request
     } from '@janishutz/oidc-login-sdk-browser';
@@ -95,11 +96,38 @@
         ) );
     };
 
+
+    const showFollowUp = ref( false );
+    const followUpQuestions = ref<QuestionSet | null>( null );
+
+    const finishQuestionnaire = async () => {
+        try {
+            const response = await fetch( '/surveys/study_feedback.json' );
+
+            if ( !response.ok ) {
+                throw new Error( 'Could not load follow-up questions' );
+            }
+
+            followUpQuestions.value = await response.json() as QuestionSet;
+            storeAnswers();
+            showFollowUp.value = true;
+        } catch ( error ) {
+            console.error( error );
+            alert( 'Failed to load follow-up questionnaire' );
+        }
+    };
+
+    const finishFollowUp = ( feedbackAnswers: Record<string, string> ) => {
+        console.log( 'Main questionnaire answers:', answers.value );
+        console.log( 'Follow-up answers:', feedbackAnswers );
+        alert( 'Questionnaire completed!' );
+    };
+
     load();
 </script>
 
 <template>
-    <div class="questionnaire-wrapper">
+    <div v-if="!showFollowUp" class="questionnaire-wrapper">
         <h1>{{ questionSet.name }}</h1>
 
         <RouterLink to="/app">
@@ -122,19 +150,19 @@
 
             <MultipleChoiceQuestion
                 v-if="question.type === 'multiple'"
-                v-model="answers[index]"
+                v-model="answers[question.id]"
                 :question="question"
             />
 
             <RadioQuestion
                 v-if="question.type === 'radio'"
-                v-model="answers[index]"
+                v-model="answers[question.id]"
                 :question="question"
             />
 
             <textarea
                 v-if="question.type === 'textarea'"
-                v-model="answers[index]"
+                v-model="answers[question.id]"
                 placeholder="Your response..."
                 rows="7"
             ></textarea>
@@ -146,10 +174,16 @@
                 type="text"
             >
         </div>
-        <button @click="storeAnswers">
+        <button @click="finishQuestionnaire">
             Submit
         </button>
     </div>
+
+    <QuestionnaireFollowUp
+        v-else-if="followUpQuestions"
+        :questions="followUpQuestions.questions"
+        @finish="finishFollowUp"
+    />
 </template>
 
 <style lang="scss">
