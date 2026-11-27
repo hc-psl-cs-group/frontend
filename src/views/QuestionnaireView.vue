@@ -8,6 +8,9 @@
         QuestionSet
     } from '@/ts/form';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
+    import {
+        request
+    } from '@janishutz/oidc-login-sdk-browser';
 
     const shuffle = <T>( items: T[] ): T[] => {
         const result = [ ...items ];
@@ -79,7 +82,18 @@
         'description': '',
         'followUpQuestions': []
     } );
-    const answers: Ref<string[]> = ref( [] );
+    const answers: Ref<{
+        [id: string]: string
+    }> = ref( {} );
+
+    const storeAnswers = () => {
+        request.put( '/responses/record', JSON.stringify(
+            {
+                'answers': answers.value,
+                'questionSetId': questionSet.value.name
+            }
+        ) );
+    };
 
     load();
 </script>
@@ -127,11 +141,14 @@
 
             <input
                 v-if="question.type === 'short-text'"
-                v-model="answers[index]"
+                v-model="answers[question.id]"
                 placeholder="Your response..."
                 type="text"
             >
         </div>
+        <button @click="storeAnswers">
+            Submit
+        </button>
     </div>
 </template>
 
