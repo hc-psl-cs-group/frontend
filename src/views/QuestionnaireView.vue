@@ -96,7 +96,7 @@
         ) );
     };
 
-    
+
     const showFollowUp = ref( false );
     const followUpQuestions = ref<QuestionSet | null>( null );
 
@@ -184,7 +184,6 @@
         :questions="followUpQuestions.questions"
         @finish="finishFollowUp"
     />
-    
 </template>
 
 <style lang="scss">

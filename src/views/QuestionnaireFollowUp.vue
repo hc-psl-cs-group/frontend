@@ -1,23 +1,27 @@
 <script setup lang="ts">
-    import { ref, type PropType } from 'vue';
+    import {
+        type PropType, ref
+    } from 'vue';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
-    import type { Question } from '@/ts/form';
+    import type {
+        Question
+    } from '@/ts/form';
 
     const props = defineProps( {
-        questions: {
-            type: Array as PropType<Question[]>,
-            required: true
+        'questions': {
+            'type': Array as PropType<Question[]>,
+            'required': true
         }
     } );
-
     const emit = defineEmits<{
-        finish: [answers: Record<string, string>]
+        'finish': [answers: Record<string, string>]
     }>();
-
     const answers = ref<Record<string, string>>( {} );
 
     const submit = () => {
-        emit( 'finish', { ...answers.value } );
+        emit( 'finish', {
+            ...answers.value
+        } );
     };
 </script>
 
