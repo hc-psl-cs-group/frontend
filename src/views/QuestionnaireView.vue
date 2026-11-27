@@ -8,6 +8,7 @@
         QuestionSet
     } from '@/ts/form';
     import RadioQuestion from '@/components/questionnaire/RadioQuestion.vue';
+    import QuestionnaireFollowUp from '@/components/questionnaire/QuestionnaireFollowUp.vue';
     import {
         request
     } from '@janishutz/oidc-login-sdk-browser';
